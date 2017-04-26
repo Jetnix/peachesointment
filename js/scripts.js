@@ -10,6 +10,7 @@ $(document).ready(function() {
     var zipInput = $("input#zip-input").val();
     var shippingInput = $("select#shipping-input").val();
 
+
     $(".name").text(nameInput);
     $(".tel").text(telInput);
     $(".email").text(emailInput);
@@ -20,8 +21,18 @@ $(document).ready(function() {
     $(".zip").text(zipInput);
     $(".shipping").text(shippingInput);
 
+
     $("#confirmation").show();
 
     event.preventDefault();
   });
+
+  $("#purchase-button").click(function() {
+  $("#confirmation").toggle();
+  $("#show-me").toggle();
+  });
+
 });
+
+    var shippingPrice = $("select#shipping-price").val();
+    $(".shipping-price").value(shippingInput);
