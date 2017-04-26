@@ -33,6 +33,3 @@ $(document).ready(function() {
   });
 
 });
-
-    var shippingPrice = $("select#shipping-price").val();
-    $(".shipping-price").value(shippingInput);
