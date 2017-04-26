@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Book your appointment for ointment!</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form">
+        <div class="form-group row">
+          <label for="name-input" class="col-2 col-form-label">Name</label>
+          <div class="col-10">
+            <input id="name-input" class="form-control" type="text">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="tel-input" class="col-2 col-form-label">Telephone</label>
+          <div class="col-10">
+            <input id="tel-input" class="form-control" type="tel">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="email-input" class="col-2 col-form-label">Email</label>
+          <div class="col-10">
+            <input id="email-input" class="form-control" type="email">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="address-input" class="col-2 col-form-label">Address</label>
+          <div class="col-10">
+            <input id="address-input" class="form-control" type="text">
+          </div>
+          <div class="col-10">
+            <input id="address-input2" class="form-control" type="text">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="city-input" class="col-xs-6 col-form-label">City</label>
+          <label for="state-input" class="col-xs-2 col-form-label">State</label>
+          <label for="zip-input" class="col-xs-4 col-form-label">Zip</label>
+          <div class="col-xs-6">
+            <input id="city-input" class="form-control" type="text">
+          </div>
+          <div class="col-xs-2">
+            <input id="state-input" class="form-control" type="text">
+          </div>
+          <div class="col-xs-4">
+            <input id="zip-input" class="form-control" type="text">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="shipping-input" class="col-2 col-form-label">Shipping Options</label>
+          <div class="col-10">
+            <select id="shipping-input" class="form-control">
+              <option>-Select One-</option>
+              <option>Overnight</option>
+              <option>2-day Express</option>
+              <option>Ground (3-5 business days)</option>
+              <option>Horseback</option>
+            </select>
+          </div>
+        </div>
+
+        <center><button type="submit" class="btn">Purchase Now!</button></center>
+      </form>
+    </div>
+
+<!-- Start Invoice -->
+    <div id="confirmation">
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12">
+          		<div class="invoice-title">
+          			<h2>Invoice</h2><h3 class="pull-right">Order # 12345</h3>
+          		</div>
+          		<hr>
+          		<div class="row">
+          			<div class="col-xs-6">
+          				<address>
+          				<strong>Billed To:</strong><br>
+          					<span class="name"></span><br>
+          					<span class="address"></span><br>
+          					<span class="address2"></span><br>
+          					<span class="city"></span>, <span class="state"></span> <span class="zip"></span>
+          				</address>
+          			</div>
+          			<div class="col-xs-6 text-right">
+          				<address>
+              			<strong>Shipped To:</strong><br>
+                    <span class="name"></span><br>
+          					<span class="address"></span><br>
+          					<span class="address2"></span><br>
+          					<span class="city"></span>, <span class="state"></span> <span class="zip"></span>
+          				</address>
+          			</div>
+          		</div>
+          		<div class="row">
+          			<div class="col-xs-6">
+          				<address>
+          					<strong>Payment Method:</strong><br>
+          					Visa ending **** 4242<br>
+          					<span class="email"></span>
+          				</address>
+          			</div>
+          			<div class="col-xs-6 text-right">
+          				<address>
+          					<strong>Order Date:</strong><br>
+          					March 7, 2014<br><br>
+          				</address>
+          			</div>
+          		</div>
+          	</div>
+          </div>
+
+          <div class="row">
+          	<div class="col-md-12">
+          		<div class="panel panel-default">
+          			<div class="panel-heading">
+          				<h3 class="panel-title"><strong>Order summary</strong></h3>
+          			</div>
+          			<div class="panel-body">
+          				<div class="table-responsive">
+          					<table class="table table-condensed">
+          						<thead>
+                                      <tr>
+              							<td><strong>Item</strong></td>
+              							<td class="text-center"><strong>Price</strong></td>
+              							<td class="text-center"><strong>Quantity</strong></td>
+              							<td class="text-right"><strong>Totals</strong></td>
+                                      </tr>
+          						</thead>
+          						<tbody>
+          							<!-- foreach ($order->lineItems as $line) or some such thing here -->
+          							<tr>
+          								<td>Bergamot Essential Oil, 16oz</td>
+          								<td class="text-center">$90.99</td>
+          								<td class="text-center">2</td>
+          								<td class="text-right">$181.98</td>
+          							</tr>
+                        <tr>
+            							<td>Lavender Essential Oil, 16oz</td>
+          								<td class="text-center">$30.00</td>
+          								<td class="text-center">3</td>
+          								<td class="text-right">$90.00</td>
+          							</tr>
+                        <tr>
+              						<td>Coconut Oil, 10 GAL Drum</td>
+          								<td class="text-center">$400.00</td>
+          								<td class="text-center">1</td>
+          								<td class="text-right">$400.00</td>
+          							</tr>
+          							<tr>
+          								<td class="thick-line"></td>
+          								<td class="thick-line"></td>
+          								<td class="thick-line text-center"><strong>Subtotal</strong></td>
+          								<td class="thick-line text-right">$671.98</td>
+          							</tr>
+          							<tr>
+          								<td class="no-line"></td>
+          								<td class="no-line"></td>
+          								<td class="no-line text-center"><strong>Shipping: </strong><span class="shipping"></span></td>
+          								<td class="no-line text-right">$10</td>
+          							</tr>
+          							<tr>
+          								<td class="no-line"></td>
+          								<td class="no-line"></td>
+          								<td class="no-line text-center"><strong>Total</strong></td>
+          								<td class="no-line text-right">$681.98</td>
+          							</tr>
+          						</tbody>
+          					</table>
+          				</div>
+          			</div>
+          		</div>
+          	</div>
+          </div>
+        </div>
+      </div>
+
+
+
+  </body>
+</html>
